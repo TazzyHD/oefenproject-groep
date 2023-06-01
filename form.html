@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Application</title>
+    <style>
+        /* CSS styling */
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-row label {
+            flex-basis: 30%;
+            font-weight: bold;
+        }
+
+        .form-row input {
+            flex-basis: 60%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-row button {
+            flex-basis: 100%;
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-row button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 800px) {
+            .container {
+                width: 80%;
+                padding: 10px;
+            }
+
+            .form-row label, .form-row input, .form-row button {
+                flex-basis: 100%;
+            }
+
+            .form-row label {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Product</h2>
+        <form action="AddProduct.php" method="POST">
+            <div class="form-row">
+                <label for="product">Product:</label>
+                <input type="text" name="product" id="product" required>
+            </div>
+            <div class="form-row">
+                <label for="price">Price:</label>
+                <input type="text" name="price" id="price" required>
+            </div>
+            <div class="form-row">
+                <label for="quantity">Quantity:</label>
+                <input type="text" name="quantity" id="quantity" required>
+            </div>
+            <div class="form-row">
+                <label for="category_id">Category ID:</label>
+                <input type="text" name="category_id" id="category_id" required>
+            </div>
+            <div class="form-row">
+                <button type="submit">Add</button>
+            </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="Index2.php" class="button">View Items List</a>
+        </div>
+    </div>
+</body
